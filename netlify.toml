@@ -1,0 +1,11 @@
+[build]
+  functions = "functions"          # Directory for serverless functions
+  command = "pip install -r requirements.txt"  # Command to install Python dependencies
+
+[[functions]]
+  name = "generate"                # Name of your serverless function
+  path = "api.py"                  # Path to your Flask app
+
+[dev]
+  command = "python api.py"        # Local development command
+  framework = "#custom"            # Use a custom framework (Flask in this case)
