@@ -70,7 +70,9 @@ def generate_response(query: str, docs: List[str]) -> str:
     if response is None:
         raise Exception("Failed to generate response")
     return response.text
-
+@app.route("/")
+def welcome():
+    return 'welcome'
 # Define API endpoint
 @app.route("/generate", methods=["POST"])
 def generate():
