@@ -5,3 +5,4 @@ groq
 google-generativeai
 flask
 zappa
+gunicorn
