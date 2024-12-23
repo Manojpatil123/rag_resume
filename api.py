@@ -50,7 +50,7 @@ def get_docs(query: str, top_k: int = 100) -> List[str]:
     query_embedding = generate_embeddings([query])[0]  # Generate embedding for the query
     # Mocking document retrieval (replace with actual retrieval logic if needed)
     # Replace `index.query` with actual Pinecone logic if using Pinecone.
-     results = index.query(vector=query_embedding, top_k=top_k, include_metadata=True)
+    results = index.query(vector=query_embedding, top_k=top_k, include_metadata=True)
     return [x["metadata"]["content"] for x in results["matches"]]
 
 # Function to generate a response using Gemini
