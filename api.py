@@ -3,6 +3,9 @@ import os
 import getpass
 import google.generativeai as genai
 from typing import List
+from pinecone import ServerlessSpec
+from pinecone import Pinecone
+import getpass
 
 # Configure Google Gemini API
 # Configure Gemini and Pinecone APIs
