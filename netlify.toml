@@ -1,7 +1,0 @@
-[build]
-  command = "pip install -r requirements.txt && zappa deploy"
-  publish = "public"  # Leave empty or specify a directory for static files
-  functions = "functions"  # Serverless functions directory
-
-[functions]
-  directory = "functions"  # Correct specification for functions directory
