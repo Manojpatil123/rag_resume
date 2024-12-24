@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 import os
 import getpass
 import google.generativeai as genai
@@ -33,7 +34,7 @@ safe = [
 
 # Initialize Flask app
 app = Flask(__name__)
-
+CORS(app, resources={r"/*": {"origins": "*"}}) 
 # Function to generate embeddings
 def generate_embeddings(texts: List[str]) -> List[List[float]]:
     """Generates embeddings for a list of text chunks using Gemini."""
